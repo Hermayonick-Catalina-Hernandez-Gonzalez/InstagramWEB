@@ -55,7 +55,7 @@ if (!in_array($extension, $EXT_ARCHIVOS_FOTOS)) {
 // Generamos un nombre de archivo random (que para este caso será un número
 // hexadecimal) de longitud de 64 chars según 32 bytes random
 $nombreArchivoGuardado = strtoupper(bin2hex(random_bytes(32)));
-$ruta = "C:/xpp/htdocs/xampp/InstagramWEB/fotos/" . $nombreArchivoGuardado . "." . $extension;  // ruta donde se guardará el archivo
+$ruta = "C:/xampp/htdocs/xampp/InstagramWEB/fotos/" . $nombreArchivoGuardado . "." . $extension;  // ruta donde se guardará el archivo
 $seGuardo = move_uploaded_file($archivoSubido["tmp_name"], $ruta);
 
 // Si no se guardo el archivo, regresamos un error

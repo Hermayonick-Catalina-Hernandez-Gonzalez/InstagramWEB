@@ -89,7 +89,7 @@ $imagen_usuario = "../fotos_perfil/" . $usuario["foto_perfil"];
         <?php if (isset($publicaciones_usuario) && !empty($publicaciones_usuario)) : ?>
           <?php foreach ($publicaciones_usuario as $publicacion) : ?>
             <div class="publicacion">
-              <img src="../fotos/<?php echo file_exists($publicacion['secure_id'] . "." . $publicacion['extension']) ? $publicacion['secure_id'] . "." . $publicacion['extension'] : ; ?>" alt="<?php echo $publicacion['descripcion']; ?>">
+            <img src="../fotos/<?php echo $publicacion['secure_id'] . "." . $publicacion['extension']; ?>" alt="<?php echo $publicacion['descripcion']; ?>">
               <form method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta publicación?');" action="../php/borrar_archivo.php">
                 <input type="hidden" name="publicacion_id" value="<?php echo $publicacion['id']; ?>" id="publicacion_id">
                 <button class="eliminar-publicacion" type="submit" name="eliminar_publicacion">Eliminar</button>

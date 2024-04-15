@@ -152,9 +152,6 @@ if (isset($_POST['eliminar_publicacion'])) {
           <?php foreach ($publicaciones_usuario as $publicacion) : ?>
             <div class="publicacion">
               <img src="../fotos/<?php echo $publicacion['secure_id'] . "." . $publicacion['extension']; ?>" alt="<?php echo $publicacion['descripcion']; ?>">
-              <form method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta publicación?');">
-                <input type="hidden" name="publicacion_id" value="<?php echo $publicacion['id']; ?>">
-              </form>
             </div>
           <?php endforeach; ?>
         </div>

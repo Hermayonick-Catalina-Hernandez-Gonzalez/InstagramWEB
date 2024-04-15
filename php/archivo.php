@@ -36,7 +36,7 @@ if (!$archivo) {  // Si no existe el registro del archivo
 }
 
 // Obtenemos la ruta completa del archivo, en la carpeta de archivos subidos.
-$rutaArchivo = "C:/xpp/htdocs/xampp/InstagramWEB/fotos/" . $archivo["nombre_archivo_guardado"];
+$rutaArchivo = "C:/xampp/htdocs/xampp/InstagramWEB/fotos/" . $archivo["nombre_archivo_guardado"];
 if (!file_exists($rutaArchivo)) {   // Si no exite el archivo.
     http_response_code(404);  // Regresamos error 404 = Not Found.
     exit();  // Fin de la ejecución.

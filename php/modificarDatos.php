@@ -41,7 +41,7 @@ if ($_FILES || isset($_FILES["imagen"]) || $_FILES["imagen"]["name"]) {
     $extension = strtolower($nombreArchivoParts[count($nombreArchivoParts) - 1]);
 
     if (in_array($extension, $EXT_ARCHIVOS_FOTOS)) {
-        $ruta = "C:/xpp/htdocs/xampp/InstagramWEB/fotos_perfil/" . $usuarioID . "_" . $nombre . "." . $extension;  // ruta donde se guardará el archivo
+        $ruta = "C:/xampp/htdocs/xampp/InstagramWEB/fotos_perfil/" . $usuarioID . "_" . $nombre . "." . $extension;  // ruta donde se guardará el archivo
 
         //Revisar si existe algun archivo con ese nombre y borrarlo para reemplazarlo
         if (file_exists($ruta)) {
